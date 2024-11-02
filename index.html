@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Mari Menabung</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link ke file CSS -->
+</head>
+<body>
+    <header>
+        <h1>Mari Menabung</h1>
+    </header>
+    <div class="container">
+        <h2>Ayo buat tabungan pertamamu</h2>
+        <form id="savingsForm">
+            <div class="form-group">
+                <label for="installmentAmount">Pilih Jumlah Angsuran:</label>
+                <select id="installmentAmount" required>
+                    <option value="">-- Pilih Jumlah Angsuran --</option>
+                    <option value="10000">Rp10,000</option>
+                    <option value="20000">Rp20,000</option>
+                    <option value="50000">Rp50,000</option>
+                    <option value="100000">Rp100,000</option>
+                    <option value="1000000">Rp1,000,000</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="targetAmount">Masukkan Target Tabungan (Rp):</label>
+                <input type="number" id="targetAmount" placeholder="Contoh: 1000000" required>
+            </div>
+            <div class="form-group">
+                <label for="savingsFrequency">Pilih Frekuensi Menabung:</label>
+                <select id="savingsFrequency" required>
+                    <option value="">-- Pilih Frekuensi --</option>
+                    <option value="harian">Harian</option>
+                    <option value="bulanan">Bulanan</option>
+                </select>
+            </div>
+            <button type="button" onclick="calculateSavings()">Hitung Tabungan</button>
+        </form>
+        <div id="result" class="result" style="display: none;">
+            <h3>Hasil Perhitungan:</h3>
+            <p id="savingsOutput"></p>
+            <h4>Checklist Menabung:</h4>
+            <div id="savingsChecklist" class="checkbox-container"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script> <!-- Link ke file JavaScript -->
+</body>
+</html>
